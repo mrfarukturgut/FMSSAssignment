@@ -9,10 +9,11 @@
 import SwiftUI
 
 //I tried to construct the view of each row in a seperate structure however It throws a unexpected runtime error. I know this the most productive way to build views as in seperating view constructors and being able to reuse the code. For this assignment It was more than enough to build the row in seperate function. But I would use this way in a more complex project. After find a solution for that runtime error.
+//Fixed it. Could not be able to sleep otherwise. 
 struct PackageRow: View {
-    @Binding var package: PackageList.Package
     @EnvironmentObject var store: PackagesViewModel
-
+    var package: PackageList.Package
+    
     var body: some View {
         VStack {
             HStack{

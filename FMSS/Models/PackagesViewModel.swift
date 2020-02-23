@@ -88,6 +88,7 @@ extension PackagesViewModel {
             return mutablePackage
         })
         self.sort()
+        self.filter()
     }
     
     func sort() {
@@ -110,6 +111,7 @@ extension PackagesViewModel {
     }
 
     func filter() {
+        print(self.allPackages.count)
         var packagesToBeFiltered = self.allPackages
         for option in self.currentFilterOptions.getFilters() {
             switch option {

@@ -11,6 +11,7 @@ import SwiftUI
 struct PackagesView: View {
     
     //This was Observedobject, however I tried to seperate the constructor of the row view. To be able to that I changed this to environment object. However there was an runtime error -which I would solve in an actual project and seperate the constructor to another structure-   when I tried the code at the lines 25-27. This works fine right now so I am not changing it.
+    //Fixed it. Could not be able to sleep otherwise. 
     @EnvironmentObject var store: PackagesViewModel
     @State var showingSort: Bool = false
     @State var showingFilter: Bool = false
@@ -22,11 +23,7 @@ struct PackagesView: View {
         
         NavigationView {
             List(self.store.filteredPackages.indices, id:\.self) { (idx) in
-//                PackageRow(package: self.$store.filteredPackages[idx], store: self._store)
-//                    .onReceive(self.store.objectWillChange) { (_) in
-//                        self.store.objectWillChange.send()
-//                }
-                self.row(self.$store.filteredPackages[idx])
+                PackageRow(package: self.store.filteredPackages[idx])
             }
             .navigationBarTitle("Paketler")
             .navigationBarItems(trailing:
@@ -76,60 +73,6 @@ struct PackagesView: View {
                         print("disappeared")
                     }
                 })
-        }
-    }
-}
-
-extension PackagesView {
-
-    //Constructs the view of each row in the list using data from binded package value.
-    private func row(_ package: Binding<PackageList.Package>) -> some View {
-           VStack {
-               HStack{
-                   Text(package.wrappedValue.name).font(.system(size: 24)).fontWeight(.medium)
-                   Spacer()
-                   Button(action: {
-                       self.store.changeFavorite(for: package.wrappedValue)
-                   }) {
-                       Image(systemName: package.wrappedValue.isFavorite ? "star.fill" : "star")
-                           .frame(width: 30, height: 30, alignment: .center)
-                           .foregroundColor(Color.yellow)
-                   }.buttonStyle(PlainButtonStyle())
-               }.padding(.vertical, 8)
-               HStack(){
-                   Text("("+package.wrappedValue.subscriptionType.value+")").fontWeight(.heavy)
-                   Spacer()
-               }
-               .padding(.horizontal, 5)
-               HStack{
-                   Text(package.wrappedValue.desc).fontWeight(.ultraLight).multilineTextAlignment(.center)
-                   Spacer()
-               }
-               .padding(.all, 10)
-               HStack(spacing: 10){
-                   Spacer()
-                   VStack(){
-                       Text(package.wrappedValue.tariff.data).font(.title)
-                       Text("MB").fontWeight(.light)
-                   }
-                   VStack(){
-                       Text(package.wrappedValue.tariff.talk).font(.title)
-                       Text("DK").fontWeight(.light)
-                   }
-                   VStack(){
-                       Text(package.wrappedValue.tariff.sms).font(.title)
-                       Text("SMS").fontWeight(.light)
-                   }
-                   Spacer()
-               }
-               HStack{
-                   Text(package.wrappedValue.didUseBefore ? "Paketi daha önce kullandınız" : "Daha önce kullanmadınız").fontWeight(.ultraLight).font(.system(size: 10))
-               }
-               HStack(){
-                   Spacer()
-                   Text("₺"+String(package.wrappedValue.price)).font(.largeTitle).fontWeight(.semibold)
-               }
-               .padding(20)
         }
     }
 }

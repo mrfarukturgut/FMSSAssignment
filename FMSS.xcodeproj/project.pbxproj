@@ -146,9 +146,9 @@
 				EBAFC53D2401FE0D0053EE84 /* Utils */,
 				EBAFC53C2401FE070053EE84 /* Models */,
 				EBAFC53B2401FDFE0053EE84 /* Views */,
-				EBC03EC023FDA1BE00576488 /* packageList.json */,
 				EBC03E9623FDA16C00576488 /* Assets.xcassets */,
 				EBC03E9B23FDA16C00576488 /* LaunchScreen.storyboard */,
+				EBC03EC023FDA1BE00576488 /* packageList.json */,
 				EBC03E9E23FDA16C00576488 /* Info.plist */,
 				EBC03E9823FDA16C00576488 /* Preview Content */,
 			);
