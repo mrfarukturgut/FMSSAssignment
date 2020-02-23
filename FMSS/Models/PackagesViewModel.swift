@@ -108,10 +108,10 @@ extension PackagesViewModel {
                 }
             }
         })
+        self.filter()
     }
 
     func filter() {
-        print(self.allPackages.count)
         var packagesToBeFiltered = self.allPackages
         for option in self.currentFilterOptions.getFilters() {
             switch option {
