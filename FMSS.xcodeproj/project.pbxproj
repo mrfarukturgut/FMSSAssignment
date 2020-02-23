@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBAFC53A240193DC0053EE84 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFC539240193DC0053EE84 /* Bool+Extension.swift */; };
+		EBAFC53F2401FE2F0053EE84 /* PackageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFC53E2401FE2F0053EE84 /* PackageRow.swift */; };
 		EBC03E9123FDA16900576488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03E9023FDA16900576488 /* AppDelegate.swift */; };
 		EBC03E9323FDA16900576488 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03E9223FDA16900576488 /* SceneDelegate.swift */; };
-		EBC03E9523FDA16900576488 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03E9423FDA16900576488 /* ContentView.swift */; };
+		EBC03E9523FDA16900576488 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03E9423FDA16900576488 /* PackagesView.swift */; };
 		EBC03E9723FDA16C00576488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC03E9623FDA16C00576488 /* Assets.xcassets */; };
 		EBC03E9A23FDA16C00576488 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC03E9923FDA16C00576488 /* Preview Assets.xcassets */; };
 		EBC03E9D23FDA16C00576488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC03E9B23FDA16C00576488 /* LaunchScreen.storyboard */; };
 		EBC03EA823FDA16C00576488 /* FMSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03EA723FDA16C00576488 /* FMSSTests.swift */; };
 		EBC03EB323FDA16D00576488 /* FMSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03EB223FDA16D00576488 /* FMSSUITests.swift */; };
+		EBC03EC123FDA1BE00576488 /* packageList.json in Resources */ = {isa = PBXBuildFile; fileRef = EBC03EC023FDA1BE00576488 /* packageList.json */; };
+		EBC03EC323FDA1E300576488 /* PackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03EC223FDA1E300576488 /* PackagesViewModel.swift */; };
+		EBC03EC82400864F00576488 /* SubscriptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03EC72400864F00576488 /* SubscriptionType.swift */; };
+		EBC03ECA2400868E00576488 /* PackageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03EC92400868E00576488 /* PackageList.swift */; };
+		EBC03ECC2400876D00576488 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC03ECB2400876D00576488 /* Options.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBAFC539240193DC0053EE84 /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
+		EBAFC53E2401FE2F0053EE84 /* PackageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageRow.swift; sourceTree = "<group>"; };
 		EBC03E8D23FDA16900576488 /* FMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC03E9023FDA16900576488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC03E9223FDA16900576488 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBC03E9423FDA16900576488 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EBC03E9423FDA16900576488 /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
 		EBC03E9623FDA16C00576488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBC03E9923FDA16C00576488 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBC03E9C23FDA16C00576488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,11 @@
 		EBC03EAE23FDA16D00576488 /* FMSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC03EB223FDA16D00576488 /* FMSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMSSUITests.swift; sourceTree = "<group>"; };
 		EBC03EB423FDA16D00576488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC03EC023FDA1BE00576488 /* packageList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = packageList.json; sourceTree = "<group>"; };
+		EBC03EC223FDA1E300576488 /* PackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModel.swift; sourceTree = "<group>"; };
+		EBC03EC72400864F00576488 /* SubscriptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionType.swift; sourceTree = "<group>"; };
+		EBC03EC92400868E00576488 /* PackageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageList.swift; sourceTree = "<group>"; };
+		EBC03ECB2400876D00576488 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EBAFC53B2401FDFE0053EE84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBC03E9423FDA16900576488 /* PackagesView.swift */,
+				EBAFC53E2401FE2F0053EE84 /* PackageRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBAFC53C2401FE070053EE84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBC03EC223FDA1E300576488 /* PackagesViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBAFC53D2401FE0D0053EE84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EBC03EC72400864F00576488 /* SubscriptionType.swift */,
+				EBC03EC92400868E00576488 /* PackageList.swift */,
+				EBC03ECB2400876D00576488 /* Options.swift */,
+				EBAFC539240193DC0053EE84 /* Bool+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		EBC03E8423FDA16900576488 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +143,10 @@
 			children = (
 				EBC03E9023FDA16900576488 /* AppDelegate.swift */,
 				EBC03E9223FDA16900576488 /* SceneDelegate.swift */,
-				EBC03E9423FDA16900576488 /* ContentView.swift */,
+				EBAFC53D2401FE0D0053EE84 /* Utils */,
+				EBAFC53C2401FE070053EE84 /* Models */,
+				EBAFC53B2401FDFE0053EE84 /* Views */,
+				EBC03EC023FDA1BE00576488 /* packageList.json */,
 				EBC03E9623FDA16C00576488 /* Assets.xcassets */,
 				EBC03E9B23FDA16C00576488 /* LaunchScreen.storyboard */,
 				EBC03E9E23FDA16C00576488 /* Info.plist */,
@@ -240,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC03EC123FDA1BE00576488 /* packageList.json in Resources */,
 				EBC03E9D23FDA16C00576488 /* LaunchScreen.storyboard in Resources */,
 				EBC03E9A23FDA16C00576488 /* Preview Assets.xcassets in Resources */,
 				EBC03E9723FDA16C00576488 /* Assets.xcassets in Resources */,
@@ -268,8 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC03E9123FDA16900576488 /* AppDelegate.swift in Sources */,
+				EBC03EC323FDA1E300576488 /* PackagesViewModel.swift in Sources */,
 				EBC03E9323FDA16900576488 /* SceneDelegate.swift in Sources */,
-				EBC03E9523FDA16900576488 /* ContentView.swift in Sources */,
+				EBAFC53A240193DC0053EE84 /* Bool+Extension.swift in Sources */,
+				EBC03ECC2400876D00576488 /* Options.swift in Sources */,
+				EBC03ECA2400868E00576488 /* PackageList.swift in Sources */,
+				EBAFC53F2401FE2F0053EE84 /* PackageRow.swift in Sources */,
+				EBC03EC82400864F00576488 /* SubscriptionType.swift in Sources */,
+				EBC03E9523FDA16900576488 /* PackagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
